@@ -16,7 +16,7 @@ except Exception as e:
     print('************')
     log.log_Error(e)
 
-print('******** Analytics 1 ********8')
+print('******** Analytics 1 ********')
 from analytics.file1 import peak_Hours
 try:
     result = peak_Hours(food_delivery)
@@ -27,3 +27,14 @@ except Exception as e:
     log.log_Error(e)
 
 
+print('******** Analytics 1 ********')
+from analytics.file2 import evening_riders
+result= evening_riders(food_delivery)
+result.show()
+try:
+    result = evening_riders(food_delivery)
+    result.show()
+    result.write.csv('Result/Analytics1',header=True,mode="overwrite")
+    log.log_Info('Analytics1 executed and result generated')
+except Exception as e:
+    log.log_Error(e)
